@@ -12,10 +12,39 @@ import LatestNews from '../components/LatestNews.astro';
 import Footer from '../components/Footer.astro';
 import { marked } from 'marked';
 
-// Fetch all articles at build/request time
+// Add timeout and error handling for fetches
+const fetchWithTimeout = async (url, timeout = 5000) => {
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeout);
+    
+    const response = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeoutId);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    return response;
+  } catch (error) {
+    console.error(`Fetch error for ${url}:`, error);
+    // Return fallback data
+    return {
+      json: () => ({
+        title: 'Unable to load article',
+        author: 'System',
+        content: [{ type: 'text', text: 'Please try again later.' }],
+        readTime: '1 min',
+        category: 'System'
+      })
+    };
+  }
+};
+
+// Update the fetch calls
 const [mainResponse, secondaryResponse] = await Promise.all([
-  fetch(new URL("/api/main-article", Astro.url)),
-  fetch(new URL("/api/secondary-articles", Astro.url))
+  fetchWithTimeout(new URL("/api/main-article", Astro.url)),
+  fetchWithTimeout(new URL("/api/secondary-articles", Astro.url))
 ]);
 
 const featuredArticle = await mainResponse.json();
