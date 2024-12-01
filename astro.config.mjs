@@ -11,5 +11,8 @@ export default defineConfig({
   output: 'server',
   adapter: node({
     mode: 'standalone'
-  })
+  }),
+  devToolbar: {
+    enabled: process.env.NODE_ENV !== 'production'
+  }
 });
