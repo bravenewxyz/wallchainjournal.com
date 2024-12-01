@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  author: string;
+  date: string;
+}
+
+const { title, author, date } = Astro.props;
+---
+<div class="mb-8">
+  <h1 class="text-3xl md:text-4xl font-serif font-bold mb-4">{title}</h1>
+  <div class="text-gray-700">
+    By <span class="font-semibold">{author}</span>
+    <span class="mx-2">|</span>
+    <time datetime={date}>{date}</time>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+---
+interface Props {
+  location: string;
+}
+
+const { location } = Astro.props;
+---
+<article class="prose prose-lg max-w-none">
+  <p class="font-bold">{location}— <slot name="intro" /></p>
+  <slot />
+</article>
