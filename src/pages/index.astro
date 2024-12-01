@@ -5,110 +5,187 @@ import ArticleHeader from '../components/ArticleHeader.astro';
 import ArticleBody from '../components/ArticleBody.astro';
 import Quote from '../components/Quote.astro';
 import SecondaryArticle from '../components/SecondaryArticle.astro';
+import Navbar from '../components/Navbar.astro';
+import MarketTicker from '../components/MarketTicker.astro';
+import SidebarNews from '../components/SidebarNews.astro';
+import LatestNews from '../components/LatestNews.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="The Man Behind the Onchain Boom">
+<Layout title="The Wall Chain Journal - Breaking Blockchain News and Analysis">
+  <Navbar />
+  <MarketTicker />
   <Header />
-  <main class="max-w-4xl mx-auto px-4 py-8">
-    <ArticleHeader 
-      title="The Man Behind the Onchain Boom: Raz's Journey from $0.10 to a $100 Million Valuation"
-      author="WCJ Staff"
-      date="December 1, 2024"
-    />
-    
-    <ArticleBody location="NEW YORK">
-      <p slot="intro">
-        In the fast-paced world of blockchain innovation, few stories are as audacious—or as improbable—as the rise of Raz, 
-        the enigmatic CEO of Onchain Computer International. In less than a week, his company went from a single retro-inspired NFT 
-        to a valuation that turned heads across the financial and tech worlds. Now, with Christmas looming, Raz is looking to take 
-        the next step: delivering virtual "onchain computers" to homes across America.
-      </p>
+  
+  <main class="grid grid-cols-12 gap-8 max-w-7xl mx-auto px-4 py-8">
+    {/* Main content column */}
+    <div class="col-span-8">
+      <div class="border-b-4 border-black mb-8">
+        <h1 class="text-sm font-serif uppercase tracking-wider text-gray-600 mb-2">Today's Top Story</h1>
+      </div>
+      
+      <ArticleHeader 
+        title="The Man Behind the Onchain Boom: Raz's Journey from $0.10 to a $100 Million Valuation"
+        author="WCJ Staff"
+        date="December 1, 2024"
+        readTime="8 min read"
+        category="Technology"
+      />
+      
+      <ArticleBody location="NEW YORK">
+        <p slot="intro">
+          In the fast-paced world of blockchain innovation, few stories are as audacious—or as improbable—as the rise of Raz, 
+          the enigmatic CEO of Onchain Computer International. In less than a week, his company went from a single retro-inspired NFT 
+          to a valuation that turned heads across the financial and tech worlds. Now, with Christmas looming, Raz is looking to take 
+          the next step: delivering virtual "onchain computers" to homes across America.
+        </p>
 
-      <p class="my-6">
-        In an exclusive interview with The Wall Street Journal, Raz explained how it all started with just 10 cents and a bold idea.
-      </p>
+        <p class="my-6">
+          In an exclusive interview with The Wall Street Journal, Raz explained how it all started with just 10 cents and a bold idea.
+        </p>
 
-      <Quote speaker="Raz, your story sounds like the stuff of Silicon Valley legend. Walk us through those first steps.">
-        It's pretty simple, really. The way this works is, Onchain Computer International started with $0.10 as the initial capital. 
-        That's all you need to deploy an NFT on Base, Coinbase's layer-2 blockchain. Our first product was the "Onchain Computer"—a 
-        smiling, retro-style PC as an NFT. It wasn't just a piece of art; it was an idea. And the idea resonated. It sold out in a 
-        single day, generating $30,000 in ETH.
-      </Quote>
+        <Quote speaker="Raz, your story sounds like the stuff of Silicon Valley legend. Walk us through those first steps.">
+          It's pretty simple, really. The way this works is, Onchain Computer International started with $0.10 as the initial capital. 
+          That's all you need to deploy an NFT on Base, Coinbase's layer-2 blockchain. Our first product was the "Onchain Computer"—a 
+          smiling, retro-style PC as an NFT. It wasn't just a piece of art; it was an idea. And the idea resonated. It sold out in a 
+          single day, generating $30,000 in ETH.
+        </Quote>
 
-      <p class="my-6">
-        "The rest happened in real time," said the self-proclaimed trillionaire.
-      </p>
+        <p class="my-6">
+          "The rest happened in real time," said the self-proclaimed trillionaire.
+        </p>
 
-      <Quote speaker="That's a staggering leap. What gave you the confidence to scale up so quickly?">
-        Selling out the NFT showed me there was real demand for the concept. It wasn't just about the nostalgia or the aesthetic—people 
-        believed in the vision. So I decided to take the company public in a way that's only possible in the blockchain world. I deployed 
-        the /onchain token and backed it with all $30,000 as liquidity. The rest happened in real time.
-      </Quote>
+        <Quote speaker="That's a staggering leap. What gave you the confidence to scale up so quickly?">
+          Selling out the NFT showed me there was real demand for the concept. It wasn't just about the nostalgia or the aesthetic—people 
+          believed in the vision. So I decided to take the company public in a way that's only possible in the blockchain world. I deployed 
+          the /onchain token and backed it with all $30,000 as liquidity. The rest happened in real time.
+        </Quote>
 
-      <Quote speaker="What do you mean by 'the rest'?">
-        People were watching me do this onchain. It's all transparent. The token started with a valuation of a few hundred thousand dollars, 
-        but as interest grew, that valuation shot up to $100 million within two days. The market validated the concept, and Onchain Computer 
-        International hasn't looked back. We've continued selling these computers, both as NFTs and now in physical form, adding ETH to the 
-        liquidity pool as we go.
-      </Quote>
+        <Quote speaker="What do you mean by 'the rest'?">
+          People were watching me do this onchain. It's all transparent. The token started with a valuation of a few hundred thousand dollars, 
+          but as interest grew, that valuation shot up to $100 million within two days. The market validated the concept, and Onchain Computer 
+          International hasn't looked back. We've continued selling these computers, both as NFTs and now in physical form, adding ETH to the 
+          liquidity pool as we go.
+        </Quote>
 
-      <Quote speaker="Let's talk about those computers. What can people expect?">
-        While the technical specifications have been public from day one, the features remain a mystery to the public. That's intentional. 
-        It's part of the excitement, the allure of what we're building. But I'll say this: they're not just retro in appearance—they're 
-        designed to deliver a blend of virtual functionality and nostalgia. And we're committed to delivering them to homes across America before Christmas.
-      </Quote>
+        <Quote speaker="Let's talk about those computers. What can people expect?">
+          While the technical specifications have been public from day one, the features remain a mystery to the public. That's intentional. 
+          It's part of the excitement, the allure of what we're building. But I'll say this: they're not just retro in appearance—they're 
+          designed to deliver a blend of virtual functionality and nostalgia. And we're committed to delivering them to homes across America before Christmas.
+        </Quote>
 
-      <Quote speaker="Scaling virtual products from a blockchain-based origin sounds challenging. What's the strategy?">
-        The beauty of blockchain is that it creates community and demand simultaneously. We've already built a base of engaged customers who 
-        are invested in the product's success, both literally and figuratively. That base gives us momentum. On the operational side, we're 
-        leveraging the liquidity we've built up to ensure manufacturing and distribution meet the demand.
-      </Quote>
+        <Quote speaker="Scaling virtual products from a blockchain-based origin sounds challenging. What's the strategy?">
+          The beauty of blockchain is that it creates community and demand simultaneously. We've already built a base of engaged customers who 
+          are invested in the product's success, both literally and figuratively. That base gives us momentum. On the operational side, we're 
+          leveraging the liquidity we've built up to ensure manufacturing and distribution meet the demand.
+        </Quote>
 
-      <Quote speaker="What's next for Onchain Computer International?">
-        We're building an ecosystem, not just a product. The computers are only the beginning. The next chapter is about exploring what it 
-        means to be "onchain" in a tangible, everyday sense. These computers are part of that journey, and there's much more to come.
-      </Quote>
+        <Quote speaker="What's next for Onchain Computer International?">
+          We're building an ecosystem, not just a product. The computers are only the beginning. The next chapter is about exploring what it 
+          means to be "onchain" in a tangible, everyday sense. These computers are part of that journey, and there's much more to come.
+        </Quote>
 
-      <p class="my-6">
-        For now, Raz's focus remains on fulfilling his bold holiday promise. Whether Onchain Computer International delivers on its ambitions 
-        remains to be seen, but one thing is clear: Raz is proving that even the humblest beginnings can lead to extraordinary outcomes in 
-        the digital age.
-      </p>
+        <p class="my-6">
+          For now, Raz's focus remains on fulfilling his bold holiday promise. Whether Onchain Computer International delivers on its ambitions 
+          remains to be seen, but one thing is clear: Raz is proving that even the humblest beginnings can lead to extraordinary outcomes in 
+          the digital age.
+        </p>
 
-      <p class="my-6">
-        As blockchain continues to reshape industries, Raz's story serves as a case study in what's possible when innovation, timing, and 
-        transparency collide.
-      </p>
-    </ArticleBody>
+        <p class="my-6">
+          As blockchain continues to reshape industries, Raz's story serves as a case study in what's possible when innovation, timing, and 
+          transparency collide.
+        </p>
+      </ArticleBody>
+    </div>
 
-    <SecondaryArticle
-      title="Market Surges as Military Base Penguin Makes Daring Escape"
-      author="Jane Smith"
-      date="December 1, 2024"
-    >
-      <p>
-        In an unprecedented turn of events, global markets experienced an unexpected rally following news of a peculiar incident at 
-        the McMurdo Station in Antarctica. A particularly clever Adelie penguin, nicknamed "Agent P" by base personnel, managed to 
-        breach security protocols and access the station's main communications center, causing a brief disruption in international 
-        weather monitoring systems.
-      </p>
+    {/* Sidebar column */}
+    <aside class="col-span-4">
+      <SidebarNews>
+        <div class="border-b-2 border-gray-200 pb-6 mb-6">
+          <h2 class="text-sm font-serif uppercase tracking-wider text-gray-600 mb-4">Market Snapshot</h2>
+          <div class="space-y-3">
+            <div class="flex justify-between">
+              <span>Bitcoin (BTC)</span>
+              <span class="text-green-600">$89,420 +5.2%</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Ethereum (ETH)</span>
+              <span class="text-green-600">$4,892 +3.8%</span>
+            </div>
+            <div class="flex justify-between">
+              <span>/onchain (CHAIN)</span>
+              <span class="text-green-600">$42.69 +420%</span>
+            </div>
+          </div>
+        </div>
 
-      <p class="mt-4">
-        The S&P 500 surged 2.3% on the news, with crypto markets following suit in what analysts are calling the "Penguin Rally." 
-        Trading algorithms, apparently triggered by the unusual combination of keywords in news feeds, initiated a cascade of buy 
-        orders across major exchanges.
-      </p>
-
-      <p class="mt-4">
-        "Sometimes the market just needs a good story," said Mark Thompson, chief market strategist at Goldman Sachs. "This 
-        penguin has done more for market sentiment than any Fed announcement this quarter."
-      </p>
-
-      <p class="mt-4">
-        The penguin was last seen waddling towards the coast, reportedly carrying what appeared to be a USB drive. Military 
-        officials have declined to comment on the contents of the drive, stating only that their primary concern is the 
-        "operational security implications of sophisticated penguin infiltration techniques."
-      </p>
-    </SecondaryArticle>
+        <div class="mb-8">
+          <h2 class="text-sm font-serif uppercase tracking-wider text-gray-600 mb-4">Breaking News</h2>
+          <LatestNews />
+        </div>
+      </SidebarNews>
+    </aside>
   </main>
+
+  {/* Secondary stories section */}
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-sm font-serif uppercase tracking-wider text-gray-600 mb-8">More Top Stories</h2>
+      <div class="grid grid-cols-3 gap-8">
+        <SecondaryArticle
+          title="Market Surges as Military Base Penguin Makes Daring Escape"
+          author="Jane Smith"
+          date="December 1, 2024"
+          category="Markets"
+          readTime="4 min read"
+        >
+          <p>
+            In an unprecedented turn of events, global markets experienced an unexpected rally following news of a peculiar incident at 
+            the McMurdo Station in Antarctica. A particularly clever Adelie penguin, nicknamed "Agent P" by base personnel, managed to 
+            breach security protocols and access the station's main communications center, causing a brief disruption in international 
+            weather monitoring systems.
+          </p>
+
+          <p class="mt-4">
+            The S&P 500 surged 2.3% on the news, with crypto markets following suit in what analysts are calling the "Penguin Rally." 
+            Trading algorithms, apparently triggered by the unusual combination of keywords in news feeds, initiated a cascade of buy 
+            orders across major exchanges.
+          </p>
+
+          <p class="mt-4">
+            "Sometimes the market just needs a good story," said Mark Thompson, chief market strategist at Goldman Sachs. "This 
+            penguin has done more for market sentiment than any Fed announcement this quarter."
+          </p>
+
+          <p class="mt-4">
+            The penguin was last seen waddling towards the coast, reportedly carrying what appeared to be a USB drive. Military 
+            officials have declined to comment on the contents of the drive, stating only that their primary concern is the 
+            "operational security implications of sophisticated penguin infiltration techniques."
+          </p>
+        </SecondaryArticle>
+
+        <SecondaryArticle
+          title="DeFi Protocol Claims AI Integration, Actually Just Using ChatGPT"
+          author="Michael Chen"
+          date="December 1, 2024"
+          category="Technology"
+          readTime="3 min read"
+        >
+          <p>In a revealing investigation, the Wall Chain Journal discovered that prominent DeFi protocol SafeYield's claimed "revolutionary AI system" was simply ChatGPT behind a fancy frontend...</p>
+        </SecondaryArticle>
+
+        <SecondaryArticle
+          title="NFT Trading Volumes Spike After Collector Accidentally Fat-Fingers Purchase"
+          author="Sarah Johnson"
+          date="December 1, 2024"
+          category="Markets"
+          readTime="3 min read"
+        >
+          <p>A mistaken decimal point led to a $3.2M purchase of a CryptoPunk, triggering a market-wide FOMO event in the NFT space...</p>
+        </SecondaryArticle>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
 </Layout>
