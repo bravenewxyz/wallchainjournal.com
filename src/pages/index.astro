@@ -33,8 +33,8 @@ const today = new Date().toLocaleDateString('en-US', {
   <MarketTicker />
   <Header />
   
-  <main class="grid grid-cols-12 gap-8 max-w-7xl mx-auto px-4 py-8">
-    <div class="col-span-8">
+  <main class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 max-w-7xl mx-auto px-4 py-8">
+    <div class="col-span-1 md:col-span-8">
       <ArticleHeader 
         title={featuredArticle.title}
         author={featuredArticle.author}
@@ -47,21 +47,21 @@ const today = new Date().toLocaleDateString('en-US', {
         {featuredArticle.content.map(section => (
           section.type === 'quote' 
             ? <Quote speaker={section.speaker}>{section.text}</Quote>
-            : <p class="my-6">{section.text}</p>
+            : <p class="my-4 md:my-6">{section.text}</p>
         ))}
       </ArticleBody>
     </div>
-    <aside class="col-span-4">
+    <aside class="col-span-1 md:col-span-4">
       <SidebarNews>
       </SidebarNews>
     </aside>
   </main>
 
   {/* Secondary stories section */}
-  <section class="bg-gray-50 py-12">
+  <section class="bg-gray-50 py-8 md:py-12">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-sm font-serif uppercase tracking-wider text-gray-600 mb-8">More Top Stories</h2>
-      <div class="grid grid-cols-3 gap-8">
+      <h2 class="text-sm font-serif uppercase tracking-wider text-gray-600 mb-6 md:mb-8">More Top Stories</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {secondaryArticles.map((article) => (
           <SecondaryArticle
             title={article.title}

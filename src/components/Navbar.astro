@@ -11,7 +11,7 @@ const currentDate = new Date().toLocaleDateString('en-US', {
   <div class="max-w-7xl mx-auto">
     {/* Top bar with date and actions */}
     <div class="flex justify-between items-center py-2 px-4 text-sm border-b border-gray-200">
-      <div>{currentDate}</div>
+      <div class="hidden sm:block">{currentDate}</div>
       <div class="flex gap-4">
         <a href="/subscribe" class="text-blue-700 hover:text-blue-900 font-semibold">Subscribe</a>
         <a href="/sign-in" class="text-gray-700 hover:text-gray-900">Sign In</a>
@@ -21,13 +21,13 @@ const currentDate = new Date().toLocaleDateString('en-US', {
     {/* Main navigation */}
     <div class="py-4 px-4">
       <div class="flex justify-between items-center">
-        <div class="flex gap-8">
-          <button class="hover:text-gray-600">
+        <div class="flex gap-4 sm:gap-8">
+          <button class="hover:text-gray-600 lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          <a href="/" class="font-serif text-3xl font-bold tracking-tight">
+          <a href="/" class="font-serif text-xl sm:text-3xl font-bold tracking-tight">
             The Wall Chain Journal
           </a>
         </div>
@@ -42,15 +42,15 @@ const currentDate = new Date().toLocaleDateString('en-US', {
     </div>
 
     {/* Secondary navigation */}
-    <div class="flex justify-center gap-6 py-2 px-4 text-sm font-medium border-t border-gray-200">
-      <a href="/markets" class="hover:text-blue-700">Markets</a>
-      <a href="/tech" class="hover:text-blue-700">Technology</a>
-      <a href="/defi" class="hover:text-blue-700">DeFi</a>
-      <a href="/nfts" class="hover:text-blue-700">NFTs</a>
-      <a href="/regulation" class="hover:text-blue-700">Regulation</a>
-      <a href="/web3" class="hover:text-blue-700">Web3</a>
-      <a href="/mining" class="hover:text-blue-700">Mining</a>
-      <a href="/opinion" class="hover:text-blue-700">Opinion</a>
+    <div class="hidden lg:flex justify-center gap-6 py-2 px-4 text-sm font-medium border-t border-gray-200 overflow-x-auto">
+      <a href="/markets" class="hover:text-blue-700 whitespace-nowrap">Markets</a>
+      <a href="/tech" class="hover:text-blue-700 whitespace-nowrap">Technology</a>
+      <a href="/defi" class="hover:text-blue-700 whitespace-nowrap">DeFi</a>
+      <a href="/nfts" class="hover:text-blue-700 whitespace-nowrap">NFTs</a>
+      <a href="/regulation" class="hover:text-blue-700 whitespace-nowrap">Regulation</a>
+      <a href="/web3" class="hover:text-blue-700 whitespace-nowrap">Web3</a>
+      <a href="/mining" class="hover:text-blue-700 whitespace-nowrap">Mining</a>
+      <a href="/opinion" class="hover:text-blue-700 whitespace-nowrap">Opinion</a>
     </div>
   </div>
 </nav> 
