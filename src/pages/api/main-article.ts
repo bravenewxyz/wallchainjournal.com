@@ -69,12 +69,17 @@ export const GET: APIRoute = async () => {
           },
           {
             type: 'quote',
-            speaker: "What's next for Onchain Computer International?",
-            text: "We're building an ecosystem, not just a product. The computers are only the beginning. The next chapter is about exploring what it means to be \"onchain\" in a tangible, everyday sense. These computers are part of that journey, and there's much more to come."
+            speaker: "The Onchain community has gained quite a reputation. What makes it unique?",
+            text: "The community is absolutely incredible at creating memes. Within minutes of any announcement, there's a flood of high-quality memes that perfectly capture the moment. But what's really special is that behind the meme culture, you've got some of the most technically sophisticated people in Web3. These are brilliant developers, researchers, and builders from places like MIT, Stanford or Irkutsk, and top tech companies who just happen to also be world-class shitposters."
           },
           {
             type: 'quote',
-            speaker: "There's been a lot of discussion about AI and decentralization. In terms of autonomy, decentralized inference seems to be a major challenge right now. What are your thoughts on this?",
+            speaker: "What's next for Onchain Computer International?",
+            text: "Our community of genius-level geeks is our greatest asset. They're not just users; they're co-creators who understand both the technical vision and the culture we're building. When you combine that level of technical expertise with an unmatched ability to spread ideas through memes, you get something really special. The computers are just the beginning - this community is going to reshape how we think about onchain culture."
+          },
+          {
+            type: 'quote',
+            speaker: "For sure. There's been a lot of discussion about AI and decentralization. In terms of autonomy, decentralized inference seems to be a major challenge right now. What are your thoughts on this?",
             text: "There are a ton of challenges with decentralizing agent architectures right now. But that's what makes it exciting, right? We're building for the future here. You've got inference, data collection, storage, wallet management - these are all massive puzzles we need to solve. One thing I learned from Guild in the early days was to be pragmatic. We always focused on building things people would actually use, not just things that sound nice in theory. Right now, open-source models aren't quite there yet. So while decentralized inference would be amazing, we're going to work with centralized service providers for now because that's where the quality is. The onchain computers we're building are taking steps toward self-sovereignty. Maybe they're baby steps, like starting with a built-in, agentic Base indexer, but that's how all great journeys begin."
           },
           {
