@@ -10,6 +10,12 @@ import MarketTicker from '../components/MarketTicker.astro';
 import SidebarNews from '../components/SidebarNews.astro';
 import LatestNews from '../components/LatestNews.astro';
 import Footer from '../components/Footer.astro';
+
+const today = new Date().toLocaleDateString('en-US', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric'
+});
 ---
 
 <Layout title="The Wall Chain Journal - Breaking Blockchain News and Analysis">
@@ -27,7 +33,7 @@ import Footer from '../components/Footer.astro';
       <ArticleHeader 
         title="The Man Behind the Onchain Computer: Raz's Journey from $0.10 to a $100 Million Valuation"
         author="WCJ Staff"
-        date="December 1, 2024"
+        date={today}
         readTime="8 min read"
         category="Technology"
       />
@@ -135,7 +141,7 @@ import Footer from '../components/Footer.astro';
         <SecondaryArticle
           title="Market Surges as Military Base Penguin Makes Daring Escape"
           author="Jane Smith"
-          date="December 1, 2024"
+          date={today}
           category="Markets"
           readTime="4 min read"
         >
@@ -167,7 +173,7 @@ import Footer from '../components/Footer.astro';
         <SecondaryArticle
           title="DeFi Protocol Claims AI Integration, Actually Just Using ChatGPT"
           author="Hugh Jass"
-          date="December 1, 2024"
+          date={today}
           category="Technology"
           readTime="3 min read"
         >
@@ -185,7 +191,7 @@ import Footer from '../components/Footer.astro';
         <SecondaryArticle
           title="NFT Trading Volumes Spike After Collector Accidentally Fat-Fingers Purchase"
           author="Ligma Johnson"
-          date="December 1, 2024"
+          date={today}
           category="Markets"
           readTime="3 min read"
         >
