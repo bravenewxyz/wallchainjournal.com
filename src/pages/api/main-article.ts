@@ -64,11 +64,6 @@ export const GET: APIRoute = async () => {
           },
           {
             type: 'quote',
-            speaker: "Scaling virtual products from a blockchain-based origin sounds challenging. What's the strategy?",
-            text: "The beauty of blockchain is that it creates community and demand simultaneously. We've already built a base of engaged customers who are invested in the product's success, both literally and figuratively. That base gives us momentum. On the operational side, we're leveraging the liquidity we've built up to ensure manufacturing and distribution meet the demand."
-          },
-          {
-            type: 'quote',
             speaker: "The Onchain community has gained quite a reputation. What makes it unique?",
             text: "The community is absolutely incredible at creating memes. Within minutes of any announcement, there's a flood of high-quality memes that perfectly capture the moment. But what's really special is that behind the meme culture, you've got some of the most technically sophisticated people in Web3. These are brilliant developers, researchers, and builders from places like MIT, Stanford or Irkutsk, and top tech companies who just happen to also be world-class shitposters."
           },
