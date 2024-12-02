@@ -36,7 +36,7 @@ export const GET: APIRoute = async () => {
           },
           {
             type: 'text',
-            text: "In an exclusive interview with The Wall Street Journal, Raz explained how it all started with just 10 cents and a bold idea."
+            text: "In an exclusive interview with The Wall Chain Journal, Raz explained how it all started with just 10 cents and a bold idea."
           },
           {
             type: 'quote',
